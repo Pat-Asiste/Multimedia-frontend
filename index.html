@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo de Acción</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: #1b1b1b;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #e50914;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        #buscador {
+            width: 90%;
+            max-width: 500px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .pelicula {
+            background: #1d1d1d;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .pelicula:hover {
+            transform: scale(1.04);
+        }
+
+        .pelicula img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .informacion {
+            padding: 15px;
+        }
+
+        .informacion h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .informacion p {
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+
+        .boton {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #e50914;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .boton:hover {
+            background: #b20710;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background: #1b1b1b;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎬 Catálogo de Películas de Acción</h1>
+
+    <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar película..."
+    >
+</header>
+
+<main>
+
+    <section class="catalogo" id="catalogo">
+
+        <article class="pelicula">
+            <img
+                src="peliculas/mad-max.jpg"
+                alt="Mad Max: Fury Road"
+            >
+
+            <div class="informacion">
+                <h2>Mad Max: Fury Road</h2>
+                <p>2015 · Acción</p>
+
+                <a
+                    class="boton"
+                    href="peliculas/mad-max.mp4"
+                >
+                    ▶ Ver película
+                </a>
+            </div>
+        </article>
+
+
+        <article class="pelicula">
+            <img
+                src="peliculas/john-wick.jpg"
+                alt="John Wick"
+            >
+
+            <div class="informacion">
+                <h2>John Wick</h2>
+                <p>2014 · Acción</p>
+
+                <a
+                    class="boton"
+                    href="peliculas/john-wick.mp4"
+                >
+                    ▶ Ver película
+                </a>
+            </div>
+        </article>
+
+
+        <article class="pelicula">
+            <img
+                src="peliculas/gladiator.jpg"
+                alt="Gladiator"
+            >
+
+            <div class="informacion">
+                <h2>Gladiator</h2>
+                <p>2000 · Acción</p>
+
+                <a
+                    class="boton"
+                    href="peliculas/gladiator.mp4"
+                >
+                    ▶ Ver película
+                </a>
+            </div>
+        </article>
+
+
+        <article class="pelicula">
+            <img
+                src="peliculas/terminator.jpg"
+                alt="Terminator 2"
+            >
+
+            <div class="informacion">
+                <h2>Terminator 2</h2>
+                <p>1991 · Acción / Ciencia ficción</p>
+
+                <a
+                    class="boton"
+                    href="peliculas/terminator.mp4"
+                >
+                    ▶ Ver película
+                </a>
+            </div>
+        </article>
+
+
+        <article class="pelicula">
+            <img
+                src="peliculas/mission-impossible.jpg"
+                alt="Mission Impossible"
+            >
+
+            <div class="informacion">
+                <h2>Mission: Impossible</h2>
+                <p>1996 · Acción / Espionaje</p>
+
+                <a
+                    class="boton"
+                    href="peliculas/mission-impossible.mp4"
+                >
+                    ▶ Ver película
+                </a>
+            </div>
+        </article>
+
+
+        <article class="pelicula">
+            <img
+                src="peliculas/top-gun.jpg"
+                alt="Top Gun Maverick"
+            >
+
+            <div class="informacion">
+                <h2>Top Gun: Maverick</h2>
+                <p>2022 · Acción / Drama</p>
+
+                <a
+                    class="boton"
+                    href="peliculas/top-gun.mp4"
+                >
+                    ▶ Ver película
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Mi servidor de películas · Catálogo local</p>
+</footer>
+
+
+<script>
+
+    const buscador = document.getElementById("buscador");
+    const peliculas = document.querySelectorAll(".pelicula");
+
+    buscador.addEventListener("input", () => {
+
+        const texto = buscador.value.toLowerCase();
+
+        peliculas.forEach(pelicula => {
+
+            const titulo =
+                pelicula.querySelector("h2").textContent.toLowerCase();
+
+            if (titulo.includes(texto)) {
+                pelicula.style.display = "";
+            } else {
+                pelicula.style.display = "none";
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
