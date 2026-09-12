@@ -5,42 +5,42 @@ const catalogoPeliculas = [
         anio: 1984,
         genero: "Acción / Ciencia ficción",
         portada: "peliculas/terminator.jpeg",
-        linkMp4: "peliculas/terminator.mp4"
+        linkMp4: "videos/terminator.mp4"
     },
     {
         nombre: "Misión Imposible",
         anio: 1996,
         genero: "Acción / Espionaje",
         portada: "peliculas/mision-imposible.webp",
-        linkMp4: "peliculas/mision-imposible.mp4"
+        linkMp4: "videos/mision-imposible.mp4"
     },
     {
         nombre: "Matrix",
         anio: 1999,
         genero: "Acción / Ciencia ficción",
         portada: "peliculas/matrix.jpeg",
-        linkMp4: "peliculas/matrix.mp4"
+        linkMp4: "videos/matrix.mp4"
     },
     {
         nombre: "Volver al Futuro",
         anio: 1985,
         genero: "Ciencia ficción / Aventura",
         portada: "peliculas/volver-al-futuro.jpeg",
-        linkMp4: "peliculas/volver-al-futuro.mp4"
+        linkMp4: "videos/volver-al-futuro.mp4"
     },
     {
         nombre: "Avengers: Endgame",
         anio: 2019,
         genero: "Acción / Sci-Fi",
         portada: "peliculas/avengers-endgame.jpeg",
-        linkMp4: "peliculas/avengers-endgame.mp4"
+        linkMp4: "videos/avengers-endgame.mp4"
     },
     {
         nombre: "La Odisea",
         anio: 1997,
         genero: "Aventura / Drama",
         portada: "peliculas/la-odisea.jpeg",
-        linkMp4: "peliculas/la-odisea.mp4"
+        linkMp4: "videos/la-odisea.mp4"
     }
 ];
 
